@@ -1,0 +1,32 @@
+public class Project2 {
+    // Sum of even Fibonacci numbers
+
+    public static void main(String[] args) {
+        Project2 p2 = new Project2();
+        p2.sumOfEvenFibonacci(4000000);
+    }
+    
+    public void sumOfEvenFibonacci(int end) {
+        int sum = 0;
+        
+        int i1 = 0;
+        int i2 = 1;
+        int i3;
+        
+        for (int i = 0; i < end; i++) {
+            i3 = i1 + i2;
+            if (i3 % 2 == 0) {
+                
+                if (i3 > end) {
+                    break;
+                }
+                
+                sum += i3;
+            }
+            i1 = i2;
+            i2 = i3;
+        }
+        
+        System.out.println(sum);
+    }
+}
